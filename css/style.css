@@ -1,0 +1,128 @@
+body {
+	font-family: "Avenir";
+	margin: 0px;
+	
+}
+
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 5px;
+	font-size: 20px;
+	word-spacing: 10px;
+}
+
+h2 {
+	letter-spacing: 1px;
+}
+
+#seeeds {
+
+	text-align: center;
+	border-radius: 100%;
+	color: #55A000;
+	margin: auto;
+
+}
+
+#seeeds p {
+	font-size: 30px;
+}
+
+#wrapper {
+	display: inline-flex;
+	width: 100%;
+}
+
+#dig-footprint {
+	width: 50%;
+}
+
+#env-footprint {
+	width: 50%;
+	margin: 0px;
+}
+
+#bg {
+	position: fixed;
+	width: 100vw;
+	height: auto;
+	z-index: -999;
+}
+
+header {
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	background-color: white;
+}
+
+header img {
+	width: 80px;
+	height: auto;
+	margin-left: 20px;
+	margin-top: 2px;
+}
+
+#title {
+    font-weight: 700;
+    font-size: 40px;
+    display: inline-block;
+    font-family: "Avenir";
+    margin-left: 10px;
+    vertical-align: middle;
+    height: 115px;
+	}
+
+#tagline {
+    font-size: 20px;
+    display: inline-block;
+    font-family: "Avenir";
+    margin-left: 20px;
+    vertical-align: middle;
+    height: 85px;
+}
+
+#accounts {
+	padding-top: 100px;
+	margin-left: 50px;
+}
+
+#events {
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	padding-top: 100px;
+}
+
+#events ul {
+	display: inline-flex;
+}
+
+#events li {
+	background-color: white;
+	width: 50%;
+	margin-right: 20px;
+	box-shadow: 10px 15px 30px rgba(0,0,0,0.1);
+	padding: 20px;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+#accounts h2 {
+	color: white;
+}
+
+#accounts h1 {
+	color: white;
+}
+
+#accounts li {
+	color: white;
+
+}
+
