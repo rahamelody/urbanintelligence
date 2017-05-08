@@ -3,10 +3,12 @@
 <head>
 	<title>Footprint</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
 <header>
-	<img src="img/footprint.png"><div id ="title">FOOTPRiNT</div><div id ="tagline">Taking control of our digital and environmental legacy. Together.</div>
+	<img src="img/Footprint_Black.png"><div id ="title">FOOTPRiNT</div><div id ="tagline">Taking control of our digital and environmental legacy. Together.</div><button style="float: right; margin-top: 20px;"><a href="signin.html" style="text-decoration: none; color: white">Hey Glen, Sign Out</a></button>
 </header>
 <img src="img/bg.png" id="bg">
 <div id="wrapper">
@@ -17,8 +19,8 @@
 	<div id="seeeds"><p><span style="font-size: 45px;"><b>500</b></span> seeeds gained</p></div>
 	<h2>Find a community event near you</h2>
 	<ul>
-		<li>Earth week cleanup in McCarren Park <b>06/12/30</b> <br><br><p style="color: #55A000; margin-top: 2px; margin-bottom: 5px;">Worth <b>200</b> seeeds</p><button>RSVP</button></li>
-		<li>Tree planting event by P.S. 123 <b>08/10/30</b> <br><br><p style="color: #55A000; margin-top: 2px; margin-bottom: 5px;">Worth <b>140</b> seeeds</p><button>RSVP</button></li>
+		<li>Earth week cleanup in McCarren Park <b>06/12/30</b> <br><br><p style="color: #55A000; margin-top: 2px;">Worth <b>200</b> seeeds</p><button>RSVP</button></li>
+		<li>Tree planting event by P.S. 123 <b>08/10/30</b> <br><br><p style="color: #55A000; margin-top: 2px;">Worth <b>140</b> seeeds</p><button>RSVP</button></li>
 	</ul>
 	<h2>Upload Utility Bills</h2>
 <button>Upload</button>
@@ -31,24 +33,71 @@
 <h1>Your Digital Legacy</h1>
 
 <h2>Open Accounts</h2>
-	<button>Destroy</button>
-	<button>Retract</button>
-	<button>Transfer</button>
+	<button id="destroy" style="background-color: red;">Destroy</button>
+	<button style="background-color: #19D6E0">Retract</button>
+	<button style="background-color: grey">Transfer</button>
 	<ul>
-		<li><input type="checkbox" value="Bank">   Wells Fargo</li>
-		<li><input type="checkbox" value="Bank">   Chase</li>
-		<li><input type="checkbox" value="Music">   Spotify</li>
-		<li><input type="checkbox" value="Beauty">   Birchbox</li>
-		<li><input type="checkbox" value="Food">   Blue Apron</li>
-		<li><input type="checkbox" value="Shopping">   Amazon</li>
-		<li><input type="checkbox" value="Mail">   Google</li>
+		<li ><img src="img/wellsfargo.png" id="wellsfargo">
+		<div class="details" id="details-wellsfargo">
+			<input type="checkbox" onClick="toggle(this)" />  Select All<br>
+			<input type="checkbox" name="foo" value="bar1">  Payment History<br>
+			<input type="checkbox" name="foo" value="bar2">  Checking Account<br>
+			<input type="checkbox" name="foo" value="bar3">  Savings Account<br>
+			<input type="checkbox" name="foo" value="bar4">  Travel Loan (Transfer only)
+		</div>
+		</li>
+		<li><img src="img/chase.png" id="chase">
+		<div class="details" id="details-chase">
+			<input type="checkbox" onClick="toggle(this)" />  Select All<br>
+			<input type="checkbox" name="foo" value="bar1">  Payment History<br>
+			<input type="checkbox" name="foo" value="bar2">  Checking Account<br>
+			<input type="checkbox" name="foo" value="bar3">  Savings Account<br>
+			<input type="checkbox" name="foo" value="bar4">  Travel Loan (Transfer only)
+		</div>
+		</li>
+		<li><img src="img/spotify.png" id="spotify">
+		<div class="details" id="details-spotify">
+			<input type="checkbox" onClick="toggle(this)" />  Select All<br>
+			<input type="checkbox" name="foo" value="bar1">  Account Information<br>
+			<input type="checkbox" name="foo" value="bar2">  Listening History<br>
+			<input type="checkbox" name="foo" value="bar2">  Following Data<br>
+		</div></li>
+		<li><img src="img/birchbox.png" id="birchbox">
+			<div class="details" id="details-birchbox">
+			<input type="checkbox" onClick="toggle(this)" />  Select All<br>
+			<input type="checkbox" name="foo" value="bar1">  Account Information<br>
+			<input type="checkbox" name="foo" value="bar2">  Beauty Preferences<br>
+		</div>
+		</li>
+		<li><img src="img/blueapron.png" id="blueapron">
+		<div class="details" id="details-blueapron">
+			<input type="checkbox" onClick="toggle(this)" />  Select All<br>
+			<input type="checkbox" name="foo" value="bar1">  Account Information<br>
+			<input type="checkbox" name="foo" value="bar2">  Food Preferences<br>
+		</div></li>
+		<li><img src="img/amazon.png" id="amazon">
+		<div class="details" id="details-amazon">
+			<input type="checkbox" onClick="toggle(this)" />  Select All<br>
+			<input type="checkbox" name="foo" value="bar1">  Account Information<br>
+			<input type="checkbox" name="foo" value="bar2">  Shipping Preferences<br>
+			<input type="checkbox" name="foo" value="bar2">  Payment Information<br>
+			<input type="checkbox" name="foo" value="bar2">  Purchase History<br>
+		</div></li>
+		<li><img src="img/google.png" id="google">
+		<div class="details" id="details-google">
+			<input type="checkbox" onClick="toggle(this)" />  Select All<br>
+			<input type="checkbox" name="foo" value="bar1">  Account Information<br>
+			<input type="checkbox" name="foo" value="bar2">  Search History<br>
+			<input type="checkbox" name="foo" value="bar2">  Ad Targeting Data<br>
+		</div></li>
+		<li><div style="background-color: rgba(255,255,255, 0.7); width: 100px; height: 100px; color: black; margin-bottom: 20px; margin-top: 20px; margin-right: 40px;"><p style="padding: 10px; line-height: 20px; text-align: center; font-weight: 700; tex">+ <br>Connect more accounts</p></div></li>
 	</ul>
-	<button>Connect more accounts</button>
+
 
 </div>
 
 </div>
 </div>
-
+	<script src="js/script.js"></script>
 </body>
 </html>
